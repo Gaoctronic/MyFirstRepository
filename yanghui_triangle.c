@@ -1,3 +1,4 @@
+//杨辉三角的数组处理与打印
 #include <stdio.h>
 
 int main(void)
