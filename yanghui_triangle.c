@@ -4,7 +4,17 @@
 int main(void)
 {
 
-    int n = 10;
+
+    int n;
+    printf("请输入杨辉三角的行数(1-15): ");
+    scanf("%d", &n);
+
+    if (n < 1 || n > 15)
+    {
+        printf("行数输入错误!\n");
+        return 1;
+    }
+
     int triangle[20][20] = {0};
 
     for (int i = 0; i < n; i++)
@@ -20,14 +30,14 @@ int main(void)
 
     for (int i = 0; i < n; i++)
     {
-        for (int k = 0; k < (n - i); k++)
+        for (int k = 0; k < (n - i - 1); k++)
         {
-            printf("  ");
+            printf("   ");
         }
         
         for (int j = 0; j <= i; j++)
         {
-            printf("%4d", triangle[i][j]);
+            printf("%6d", triangle[i][j]);
         }
 
         printf("\n");
