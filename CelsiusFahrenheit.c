@@ -2,6 +2,12 @@
 #define MODE_C_TO_F 1
 #define MODE_F_TO_C 2
 
+/* This function coverts temperature form from celsius to fahrenheit*/
+float CelsiusToFahrenheit(float celsius);
+
+/* This function converts temperature form from celsius to fahrenheit*/
+float FahrenheitToCelsius(float fahrenheit);
+
 float CelsiusToFahrenheit(float celsius) {
     return (celsius * 9.0 / 5.0) + 32.0;
 }
@@ -15,12 +21,12 @@ int main(void) {
     printf("请输入数字以选择模式: 1.Celsius to Fahrenheit, 2.Fahrenheit to Celsius\n");
     scanf("%d", &mode);
 
-    if(mode == MODE_C_TO_F){
+    if(mode == MODE_C_TO_F) {
         printf("请输入摄氏温度: ");
         scanf("%f", &celsius);
         fahrenheit = CelsiusToFahrenheit(celsius);
         printf("%.2f 摄氏度 = %.2f 华氏度\n", celsius, fahrenheit);
-    } else if(mode == MODE_F_TO_C){
+    } else if(mode == MODE_F_TO_C) {
         printf("请输入华氏温度: ");
         scanf("%f", &fahrenheit);
         celsius = FahrenheitToCelsius(fahrenheit);

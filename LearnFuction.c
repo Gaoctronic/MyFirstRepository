@@ -7,12 +7,20 @@
 #define isOdd(n) ((n) % 2 == 1)
 
 // This function provides an area of a valid triangle.
+float AreaOfTriangle(float a, float b, float c);
+// This function prints the multiplication table from 1 to 9.
+void PrintMulTable(void);
+// This function calculates the hypotenuse of a right triangle given the other two sides.
+float Hypotenuse(float a, float b);
+
+
+
 float AreaOfTriangle(float a, float b, float c)
 {
 
     if (a <= 0 || b <= 0 || c <= 0 || (a + b <= c) || (a + c <= b) || (b + c <= a))
     {
-        return -1; // Invalid triangle sides
+        return -1;
     }
 
     float s = (a + b + c) / 2;
@@ -20,7 +28,6 @@ float AreaOfTriangle(float a, float b, float c)
     return sqrt(area_expr);
 }
 
-// This function prints the multiplication table from 1 to 9.
 void PrintMulTable(void)
 {
     for (int i = 1; i <= 9; i++)
@@ -31,9 +38,9 @@ void PrintMulTable(void)
         }
         printf("\n");
     }
+    return;
 }
 
-// This function calculates the hypotenuse of a right triangle given the other two sides.
 float Hypotenuse(float a, float b)
 {
     return sqrt(a * a + b * b);
